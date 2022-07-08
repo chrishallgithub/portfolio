@@ -3,4 +3,4 @@ Disallow: /labs/
 Disallow: /work/
 Disallow: /visitors/
 
-Sitemap: http://www.chrishall.se/sitemap.xml
+Sitemap: https://www.chrishall.se/sitemap.xml

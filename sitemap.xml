@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
    <url>
-      <loc>http://www.chrishall.se/</loc>
+      <loc>https://www.chrishall.se/</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
 
    <url>
-      <loc>http://www.chrishall.se/#!/copy</loc>
+      <loc>https://www.chrishall.se/#!/copy</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
 
    <url>
-      <loc>http://www.chrishall.se/#!/experiments</loc>
+      <loc>https://www.chrishall.se/#!/experiments</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
 
    <url>
-      <loc>http://www.chrishall.se/#!/exploringTech</loc>
+      <loc>https://www.chrishall.se/#!/exploringTech</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
 
    <url>
-      <loc>http://www.chrishall.se/#!/groupDevelopment</loc>
+      <loc>https://www.chrishall.se/#!/groupDevelopment</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
 
    <url>
-      <loc>http://www.chrishall.se/#!/megaphone</loc>
+      <loc>https://www.chrishall.se/#!/megaphone</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
 
    <url>
-      <loc>http://www.chrishall.se/#!/moderna</loc>
+      <loc>https://www.chrishall.se/#!/moderna</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
 
    <url>
-      <loc>http://www.chrishall.se/#!/pingPong</loc>
+      <loc>https://www.chrishall.se/#!/pingPong</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
 
    <url>
-      <loc>http://www.chrishall.se/#!/telia</loc>
+      <loc>https://www.chrishall.se/#!/telia</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
    
    <url>
-      <loc>http://www.chrishall.se/#!/webApps</loc>
+      <loc>https://www.chrishall.se/#!/webApps</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
    
    <url>
-      <loc>http://www.chrishall.se/#!/rfid</loc>
+      <loc>https://www.chrishall.se/#!/rfid</loc>
 	  <lastmod>2012-10-12</lastmod>
    </url>
 

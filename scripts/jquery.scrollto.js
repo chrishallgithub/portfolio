@@ -1,7 +1,7 @@
 /**
  * @depends jquery
  * @name jquery.scrollto
- * @package jquery-scrollto {@link http://balupton.com/projects/jquery-scrollto}
+ * @package jquery-scrollto {@link https://balupton.com/projects/jquery-scrollto}
  */
 
 /**
@@ -19,10 +19,10 @@
 	 * @version 1.2.0
 	 * @date July 9, 2012
 	 * @since 0.1.0, August 27, 2010
-	 * @package jquery-scrollto {@link http://balupton.com/projects/jquery-scrollto}
-	 * @author Benjamin "balupton" Lupton {@link http://balupton.com}
-	 * @copyright (c) 2010 Benjamin Arthur Lupton {@link http://balupton.com}
-	 * @license MIT License {@link http://creativecommons.org/licenses/MIT/}
+	 * @package jquery-scrollto {@link https://balupton.com/projects/jquery-scrollto}
+	 * @author Benjamin "balupton" Lupton {@link https://balupton.com}
+	 * @copyright (c) 2010 Benjamin Arthur Lupton {@link https://balupton.com}
+	 * @license MIT License {@link https://creativecommons.org/licenses/MIT/}
 	 */
 	ScrollTo = $.ScrollTo = $.ScrollTo || {
 		/**

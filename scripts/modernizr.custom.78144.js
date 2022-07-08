@@ -1,5 +1,5 @@
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-fontface-canvas-teststyles
+ * Build: https://modernizr.com/download/#-fontface-canvas-teststyles
  */
 ;
 

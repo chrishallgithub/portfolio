@@ -544,7 +544,7 @@ $('#form').submit(function(e) {
 	
 	e.preventDefault();
 	
-		//stolen from http://stackoverflow.com/questions/9822495/how-to-check-with-js-if-flash-is-installed-or-not
+		//stolen from https://stackoverflow.com/questions/9822495/how-to-check-with-js-if-flash-is-installed-or-not
 	var hasFlash = ((typeof navigator.plugins != "undefined" && typeof navigator.plugins["Shockwave Flash"] == "object") || (window.ActiveXObject && (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) != false));
 
 	
