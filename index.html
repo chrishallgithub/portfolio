@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="image_src" href="http://www.chrishall.se/faviconLarge.png" />
+-->
+<meta property="og:tag image" content="http://www.chrishall.se/faviconLarge.png"/>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=NmPLo577jx">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=NmPLo577jx">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=NmPLo577jx">
+<link rel="manifest" href="/site.webmanifest?v=NmPLo577jx">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=NmPLo577jx" color="#000000">
+<link rel="shortcut icon" href="/favicon.ico?v=NmPLo577jx">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<title>Chris Hall - Digital Creative</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Chris Hall - Digital Creative who works with Code, Concept, Copy & Management." />
+<link rel="stylesheet" type="text/css" href="mainCSS.css?t=<?=time()?>" />
+
+</head>
+
+<body class="nojQuery" onLoad="init()">
+
+
+<div id="gifs">GIFs: On<!-- <canvas id="gifs1" width="45" height="30" style="position:absolute; top:0px; left:0px;"></canvas> --></div>
+
+<div id="contents">
+
+	<div id="colours">
+
+            <div class="colour" id="green" onClick="color(this)"></div>
+            <div class="colour" id="blue" onClick="color(this)"></div>
+            <div class="colour" id="red" onClick="color(this)"></div>
+            <div class="colour" id="yellow" onClick="color(this)"></div>
+            <div class="colour" id="orange" onClick="color(this)"></div>
+            <div class="colour" id="black" onClick="color(this)"></div>
+            <!-- <div class="colour" id="white" onclick="color(this)"></div> -->
+            <div id="canOff" onClick="erase()">Paint: On</div>
+            
+  	</div>
+
+    <div id="music">
+        <div id = "grooveWidget"></div>
+
+        <form id="form">
+            <input type="text" style="border: 4px solid #000; width:220px; height:30px; color:#000; font-size:23px; font-family: bebas-neue, arial, helvetica; vertical-align:middle;" name="inputText" id="inputText" placeholder=" Favourite band?">
+        </form>
+
+        <div id="crochet" title="Click Me!"><canvas id="crochet1" width="30" height="30"></canvas>
+        </div>
+    
+    	<div id="submit">GO</div>
+
+	</div><!-- end Music --> 
+
+    <div id="logo"></div>
+
+    <div id="nav">
+    
+        <div id="about" class="navItem">
+            About
+        </div>
+        
+        <div id="contact" class="navItem">
+            Contact
+        </div>
+        
+        <div id="experiments" class="navItem">
+            Experiments
+        </div>
+ 	</div>       
+       
+    <div id="casesContainer">
+        <div id="case1" class="cases">
+            <div id="case1Desc" class="casesDesc">
+            Telia - Creative/ Copy/ Design <span class="casesDescMore"><br />Telia asked how they could improve their use of the mobile channel. We said: "Stop thinking of it as the mobile channel".</span>
+            </div>
+        </div>
+            
+        <div id="case2" class="cases">
+            <div id="case2Desc" class="casesDesc">
+            RFID Music Player - Dev/ Concept/ Tech<span class="casesDescMore"><br />Relying on computers to access music felt unnatural, so I built an <span style="text-decoration:line-through;">RFID-controlled</span> Magic Mp3 player.
+            </span>
+            </div>
+        </div>
+        
+        <div id="case3" class="cases right">
+            <div id="case1Desc" class="casesDesc">
+            Megaphone - CEO/ MGMT/ Creative/ Copy<span class="casesDescMore"><br />I got the opportunity to try out life as a CEO during a module at Hyper Island. My agency won the Best Agency prize.</span>
+            </div>
+        </div>
+        
+        <div id="case4" class="cases">
+            <div id="case1Desc" class="casesDesc">
+            Moderna Museet - MGMT/ Creative/ Video <span class="casesDescMore"><br />Smartphone app for Sweden’s National Modern Art Museum. It made the museum and its collection more accessible.</span>
+            </div>
+        </div>
+        
+        <div id="case5" class="cases">
+            <div id="case1Desc" class="casesDesc">
+            WebRTC hack - Concept/ Web Development <span class="casesDescMore"><br />Hackathon at Google's offices to demonstrate the possibilities of WebRTC. Developed an in-browser Ping Pong game.</span>
+            </div>
+        </div>
+        
+        <div id="case6" class="cases right">
+            <div id="case1Desc" class="casesDesc">
+            Group Development - Facilitator<span class="casesDescMore"><br />I believe in teamwork, and I have experience in facilitating group development.</span>
+            </div>
+        </div>
+        
+        <div id="case7" class="cases">
+            <div id="case1Desc" class="casesDesc">
+            Webapps - Creative/ Development <span class="casesDescMore"><br />Webapps are super-open versions of smartphone apps. I made  a few to play around with various API's.</span>
+            </div>
+        </div>
+        
+        <div id="case8" class="cases">
+            <div id="case1Desc" class="casesDesc">
+            Touchscreen Game - Concept/ Tech <span class="casesDescMore"><br />Exploring Technology module at Hyper Island. my group developed a fun, but challenging memory game.</span>
+            </div>
+        </div>
+        
+        <div id="case9" class="cases right">
+            <div id="case1Desc" class="casesDesc">
+            Hyper Island Brochure - Copy Editor<span class="casesDescMore"><br />Hyper Island releases a brochure every year. I was the Copy Editor for 2011/2012</span>
+            </div>
+        </div>
+
+        <canvas id="exit" title="Close" width="36" height="32"></canvas>
+        <div id="fullCasesContainer">
+        
+            <div id="fullCase">
+                
+            </div>
+            
+       	</div><!-- end fullCasesContainer -->
+       
+	</div> <!-- end casesContainer -->
+   
+   
+</div> <!-- end contents -->
+
+<div id="footer">
+
+     	<div id="aboutContainer">
+        	<span id="aboutClose" style="float:right;cursor:pointer;">
+            	<canvas id="up" title="Back to Top" width="36" height="32"></canvas>
+            </span>
+            
+            <div id="aboutTitle">Hello! I'm Chris.</div>
+            
+            <div id="aboutText">
+
+            I'm a Digital Creative from the North of England, and I live in Stockholm, Sweden<!--Buenos Aires, Argentina-->.<br />My aim is to use the web to make our lives easier and better.<br />I'm a graduate of <a href="http://www.hyperisland.com/" target="_blank">Hyper Island's</a> Digital Media program.<br />I'm available for full-time positions and freelance work.<br /><br /><br />
+                <div id="aboutWhatHow">
+                    <div class="aboutColumn">
+                        <span class="bold">What do I do?</span><br /><br />
+                        <div>
+                            Concept Development<br />
+                            Copywriting<br />
+                            Web Design and Development<br />
+                            HTML5, CSS3, Javascript, jQuery, Node.js, PHP, MySQL<br />
+                            Shopify, Wordpress<br />
+                            Arduino, Raspberry Pi, Hardware Hacking<br />
+                            Project Management<br />
+                            Strategy<br />
+                            Pitching/ Storytelling<br />
+                        </div>
+                    </div>
+                    
+                    <div class="aboutColumn">
+                        <span class="bold">How do I do it?</span><br /><br />
+                        <div>
+                            With a big grin; I love this stuff.<br />
+                            By constantly learning about new ideas and techniques<br />
+                            By using Adobe Creative Suite<br />
+                            By working in groups that value process<br />
+                            By building fast prototypes<br /><br /><br />
+                        </div>
+                    </div>
+                
+                </div>
+                <br />
+                <br />
+                I also have a world-class knowledge of useless facts that seem to become relevant in weird ways.<br /><br /> Enough about me; what about you? If you would like to get in touch, please use any of the methods below.<br /><br />
+            
+            </div>
+            
+        </div>
+        
+        <div id="contacter"></div>
+        
+       	<div id="contactContainer">      
+        
+        	<span id="contactClose" style="float:right; cursor:pointer;">
+        		<canvas id="up2" title="Back to Top" width="36" height="32"></canvas>
+          	</span>
+            
+            <div id="contactTitle">Here's how to contact me:</div>
+            
+            <div id="email">
+                <a href="mailto:contactchrishall@gmail.com">
+                	<div id="emailImage"></div></a>
+                <a href="mailto:contactchrishall@gmail.com">
+                	<div id="emailText">contactchrishall@gmail.com</div></a>
+          	</div>
+            
+            <div id="linkedIn">
+                <a href ="http://www.linkedin.com/in/chrishalllinked" target="_new">
+                	<div id="linkedInImage"></div></a>
+                <a href ="http://www.linkedin.com/in/chrishalllinked" target="_new">
+                	<div id="linkedInText">linkedin.com/in/chrishalllinked</div></a>
+            </div>
+            
+            <div id="twitter">
+                <a href ="https://twitter.com/chrishalltweets" target="_new">
+                	<div id="twitterImage"></div></a>
+                <a href ="https://twitter.com/chrishalltweets" target="_new">
+                	<div id="twitterText">@chrishalltweets</div></a>
+            </div>
+            
+
+           
+       	</div>
+        
+ 
+</div>       
+		<!-- drawing canvas -->
+		<canvas id="can" width="1024" height="100" style="position:absolute; top:0px; z-index:-2;"></canvas> 
+        
+        <div id="bottomCover" style="color:#fff; font-family:droid-sans; font-size:12px; text-align:right;">Copyright 2010 - <script>document.write(new Date().getFullYear());</script> Chris Hall. There's plenty of stuff on here that I'm willing to share, but please ask for permission first.</div>
+
+</body>
+</html>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="scripts/modernizr.custom.78144.js"></script><!-- to test canvas & font face  -->
+
+<script type="text/javascript" src="scripts/mainJS.js"></script>
+
+<script type="text/javascript" src="scripts/jquery.scrollto.js"></script>

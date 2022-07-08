@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Colour Mover</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1" />
+<link rel="manifest" href="site.webmanifest'">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="shortcut icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="shortcut icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="shortcut icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="shortcut icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<link href="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" rel="icon" type="image/x-icon" />
+
+<style>
+
+body{
+	margin:0 auto;
+	padding:0px;
+	background-color:#000;
+	overflow:hidden;
+
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+#colour{
+	width:100%;
+	/*height:4000px;*/
+    height: 1000vh;
+}
+
+</style>
+</head>
+
+<body onLoad="colourMover()">
+
+<div id = "colour">
+</div>
+
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>
+
+var moves, changeR, changeG, changeB, sensitivity, x1, y1, z1, x2, y2, z2;
+
+var red = 255; green = 255; blue = 255;
+
+//gracias http://stackoverflow.com/questions/4475219/detect-a-shake-in-ios-safari-with-javascript !
+function colourMover(){
+	
+	if (typeof window.DeviceMotionEvent != 'undefined') {
+		
+		// Shake sensitivity (a lower number is more)
+		sensitivity = 0;
+	
+		// Position variables
+		x1 = 0, y1 = 0, z1 = 0, x2 = 0, y2 = 0, z2 = 0;
+	
+		// Listen to motion events and update the position
+		window.addEventListener('devicemotion', function (e) {
+			x1 = e.accelerationIncludingGravity.x;
+			y1 = e.accelerationIncludingGravity.y;
+			z1 = e.accelerationIncludingGravity.z;
+		}, false);
+	
+		// Periodically check the position and fire
+		// if the change is greater than the sensitivity
+		moves = setInterval(checkMoves, 150);
+
+        //alert('Move.');
+
+        $("#colour").trigger( "click" );
+	}
+}
+
+function checkMoves(){
+	
+	changeR = Math.abs(x1-x2);
+	changeG = Math.abs(y1-y2);
+	changeB = Math.abs(z1-z2);
+
+	red = Math.round(changeR*25.7); //convert to positive
+	green = Math.round(changeG*25.7);
+	blue = Math.round(changeB*25.7);
+
+	//$("#colour").html("colour: " + red + "<br />," + green + "<br />," + blue);
+
+	var colour = "rgb(" + red + "," + green + "," + blue + ")";
+	
+	$("#colour").css({"background-color" : colour});
+
+	//setTimeout(window.scrollTo(0, 1), 10);
+
+    window.addEventListener('load', function(e) {
+        setTimeout(function() { window.scrollTo(0, 1); }, 1);
+      }, false);
+
+    document.body.requestFullscreen();
+
+}
+</script>

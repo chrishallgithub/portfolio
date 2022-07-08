@@ -1,0 +1,121 @@
+<script type="text/javascript">
+<!--
+window.location = "../../#!/rfid"
+//-->
+</script><!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/png" href="../images/Favicon.png">
+<title>Magic Musc Player</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="cases/caseStyle.css" />
+</head>
+
+<body class="nojQuery">
+
+
+<div id="contents">    
+
+       
+       <div id="casesContainer">
+       
+       
+       
+       
+       	<div id="fullCase">
+
+        	<center>
+        	<div id="fullTitle" style="margin-left:40px;"><span style="text-decoration:line-through;">RFID</span> Magic Music Player
+            </div>
+                        
+
+             <div id="fullImage">
+             
+                <iframe src="https://player.vimeo.com/video/50827952?title=0&byline=0&portrait=0" width="830" height="466" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+
+       
+          
+            <div id="fullCopy">
+
+                <span class="bold">Overview</span><br /><br />
+
+I love music. I love the portability of Mp3. I hate the interaction of most Mp3 players.<br /><br />
+
+I built a web-based Mp3 player that is controlled by either <a href="http://en.wikipedia.org/wiki/Radio-frequency_identification" target="_blank">RFID</a> input, or user input on a web page. I used <a href="http://arduino.cc/" target="_blank">Arduino</a>, <a href="http://en.wikipedia.org/wiki/HTML5" target="_blank">HTML5</a>, <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">Javascript</a>, <a href="http://jquery.com/" target="_blank">jQuery</a> and a bunch of <a href="http://www.php.net/" target="_blank">PHP</a>. If you forget the technical side though, it seems to work by magic.<br /><br />
+
+<span class="bold">Background</span><br /><br />
+
+I had a party at my apartment. I found myself spending way too much time organising the music than actually talking to my friends. When I thought about this, I found myself yearning for the good ol’ days of CDs or even LPs. Back then, interaction was minimal; choose a song to play, find the CD/ LP, and erm, play it. The process also involved admiring the artwork, and would even spark a conversation about which song to play. It seemed a much more human way to interact with technology.<br /><br />
+
+I realised a few things; most importantly that poor interaction can make you dislike something you love.<br /><br />
+
+<span class="bold">Aim</span><br /><br />
+
+I wanted something more responsive; something more social. I wanted to use my tech knowledge to access my music collection in a way that required minimal interaction, would be fun, allow me to rediscover forgot artwork, and even start a conversation or two.<br /><br />
+            	
+            </div>
+            
+            </center>
+		
+     	</div><!-- end fullCase -->
+
+       
+			
+       
+       </div><!-- end casesContainer -->
+   
+</div> <!-- end contents -->
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+function swapImage(){
+    var active = $('#modImg .selected');
+	var activeT = $('#modList .black');
+	
+    var next = ($('#modImg .selected').next().length > 0) ? $('#modImg .selected').next() : $('#modImg img:first');
+	var nextT = ($('#modList .black').next().length > 0) ? $('#modList .black').next() : $('#modList span:first');
+	
+    active.fadeOut(function(){
+         active.removeClass('selected');
+         next.fadeIn().addClass('selected');
+		 
+     });
+		 activeT.removeClass('black');
+		 nextT.addClass('black');
+}
+
+setInterval(swapImage, 3000);
+
+
+
+
+//draw the gif "X"
+cX=document.getElementById("exit");
+ctxX=cX.getContext("2d");
+ctxX.strokeStyle="#000";
+ctxX.lineWidth=4;
+//X
+		ctxX.moveTo(5,5);
+		ctxX.lineTo(29,29);
+		ctxX.moveTo(29,5);
+		ctxX.lineTo(5,29);
+
+		ctxX.stroke();
+
+//submit the form
+$("#exit").click(function () {
+	$("#contents").ScrollTo(1000);
+	$("#casesContainer").fadeOut(function(){;
+	$("##case1, #case2, #case3, #case4, #case5, #case6, #case7, #case8, #case9").fadeIn().html(case1);
+	location.hash = '';
+	});
+});
+
+
+</script>

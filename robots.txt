@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /labs/
+Disallow: /work/
+Disallow: /visitors/
+
+Sitemap: http://www.chrishall.se/sitemap.xml

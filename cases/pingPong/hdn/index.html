@@ -1,0 +1,129 @@
+<!DOCTYPE html>   
+<html>  
+<head>
+<title>A Hard Day's Night</title>
+<link rel="icon" type="image/png" href="../../../images/Favicon.png">
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script type="text/javascript">  
+
+	var a=0;
+	var SI=0;
+
+	function init(){
+		
+		/*if(navigator.webkitGetUserMedia){
+			//this previously was "navigator.webkitGetUserMedia('video', onSuccess, onFail);"
+			navigator.webkitGetUserMedia({audio: true, video: true}, onSuccess, onFail);
+		}else{
+			alert('webRTC not available');
+		}*/
+
+        /*let stream = null;
+
+        try {
+            stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            // use the stream
+            onSuccess(stream);
+        } catch(err) {
+            // handle the error
+            onFail();
+            //console.log(err);
+
+        }*/
+
+        //This way for Safari & FF.
+        let stream = navigator.mediaDevices.getUserMedia({ video: true }).then(
+            onSuccess
+        ).catch(
+            onFail
+        );
+
+
+	}
+
+	function onSuccess(stream){
+
+        var video = document.getElementById('camFeed');
+        video.srcObject = stream;
+
+		//document.getElementById('camFeed').src = webkitURL.createObjectURL(stream);
+	}
+	
+	function onFail(){
+		alert("Error: Check your browser's settings for camera access on this site.");
+	}
+		
+    var c, v;
+		
+	function repeater(){
+
+		SI = setInterval (function () {
+		
+			if(a<5){
+			$("#startPos").append('<div class ="newPics" style="float:left; width:100px; height:100px; background-color:#d4d5d7; position:absolute; top:0px; left:' +(a*99)+ 'px;"><canvas id = "photo' + a + '" width="99" height="99">')
+			}
+		
+			else if(a==5){
+			$("#startPos").append('<div class ="newPics" style="float:left; width:100px; height:100px; background-color:#d4d5d7; position:absolute; top:100px; left:0px;"><canvas id = "photo' + a + '" width="99" height="99">')
+			}
+			
+			else if(a>5 && a<11){
+			$("#startPos").append('<div class ="newPics" style="float:left; width:100px; height:100px; background-color:#d4d5d7; position:absolute; top:100px; left:' +((a-6)*99)+ 'px;"><canvas id = "photo' + a + '" width="99" height="99">')
+			}
+		
+			else if(a==11){
+			$("#startPos").append('<div class ="newPics" style="float:left; width:100px; height:100px; background-color:#d4d5d7; position:absolute; top:200px; left:0px;"><canvas id = "photo' + a + '" width="99" height="99">')
+			}
+			
+			else if(a>11 && a<17){
+			$("#startPos").append('<div class ="newPics" style="float:left; width:100px; height:100px; background-color:#d4d5d7; position:absolute; top:200px; left:' +((a-12)*99)+ 'px;"><canvas id = "photo' + a + '" width="99" height="99">')
+			}
+			else if(a==17){
+			$("#startPos").append('<div class ="newPics" style="float:left; width:100px; height:100px; background-color:#d4d5d7; position:absolute; top:300px; left:0px;"><canvas id = "photo' + a + '" width="99" height="99">')
+			}
+			
+			else if(a>17 && a<22){
+			$("#startPos").append('<div class ="newPics" style="float:left; width:100px; height:100px; background-color:#d4d5d7; position:absolute; top:300px; left:' +((a-17)*99)+ 'px;"><canvas id = "photo' + a + '" width="99" height="99">')
+			}
+	
+			c = document.getElementById("photo"+ a);
+			v = document.getElementById("camFeed"); //Not updating on Safari.
+			c.getContext('2d').drawImage(v, 0, 0, 99, 99);
+	
+			a++;
+		
+			if(a==22) {
+				 clearInterval(SI);
+			 }
+
+		}, 1000);
+	
+	}
+
+</script>  
+
+</head>  
+
+<body onLoad="init();">  
+    <!-- Needs to be visible for Safari to update the images -->
+    <div id ="vid" style="margin:0; width:400px; float:left;">
+		<video id="camFeed" width="1" height="1" autoplay>  
+		</video>  
+	</div>
+    
+	<div id="central" style="margin:auto; width:500px; position:relative;">
+    
+    	<div style="margin:auto; width:82px;">  
+			<input type="button" value="Take Photos" onClick="repeater();">
+		</div> 
+    
+        <div id="startPos" style="width:99px; height:100px; position:absolute; top:155px; right:396px; float:left;"></div>   
+        <img src="hdn.png" height="500" width="500" style="box-shadow: 0 0 30px #333; position:absolute; top:70px;" alt="A Hard Day's Night - The Beatles." />
+
+ 	</div>
+
+</body>  
+</html>

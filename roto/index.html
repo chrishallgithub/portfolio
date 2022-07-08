@@ -1,0 +1,214 @@
+<html lang="en"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    </head>
+    <body>
+            <video id="webcam" style="display:none;" muted></video>
+            <!--<video id="webcam" width="640" height="480" style="display:none;" muted></video>-->
+
+            <button id="button" style="display:none;" onclick="startRoto()">Grant camera access.</button>
+
+            <div style="display: flex;">
+                <!--<canvas id="canvas" width="640" height="480"></canvas>-->
+                <canvas id="canvas" width="640" height="480" style="margin: 0 auto;"></canvas>
+                <div id="no_rtc" class="alert alert-error" style="display:none;"></div>
+                <!--<div id="log" class="alert alert-info"><strong>FPS: 36.76</strong><br>grayscale: 1ms<br>sobel: 2ms</div>-->
+            </div>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jsfeatmin.js"></script>
+        <script type="text/javascript" src="js/compat.js"></script>
+        <script type="text/javascript" src="js/profiler.js"></script>
+        <script type="text/javascript">
+
+        //window.onload = async function() {
+
+        //Update on device rotation too...
+        //var screenWidth  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        //var screenHeight = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+
+        var screenWidth  = 640;
+        var screenHeight = 480;
+
+        window.onload = function() {
+
+            var button = document.getElementById('button').style.display = "block";
+
+        }
+
+        var startRoto = function() {
+
+            var button = document.getElementById('button').style.display = "none";
+
+            "use strict";
+
+            // lets do some fun
+            var video = document.getElementById('webcam');
+            var canvas = document.getElementById('canvas');
+            //video.webkitRequestFullScreen();
+            canvas.style.width = screenWidth;
+            canvas.style.height = screenHeight;
+            video.style.width = screenWidth;
+            video.style.height = screenHeight;
+
+            try {
+
+                var attempts = 0;
+                var readyListener = function(event) {
+
+                    findVideoSize();
+                };
+                var findVideoSize = function() {
+
+                    if(video.videoWidth > 0 && video.videoHeight > 0) {
+                        //video.removeEventListener('loadeddata', readyListener);
+                        onDimensionsReady(video.videoWidth, video.videoHeight);
+
+                    } else {
+                        if(attempts < 10) {
+                            attempts++;
+                            setTimeout(findVideoSize, 200);
+                        } else {
+                            onDimensionsReady(640, 480);
+                        }
+                    }
+                };
+                var onDimensionsReady = function(width, height) {
+
+                    //demo_app(width, height);
+
+                    demo_app(screenWidth, screenHeight);
+                    compatibility.requestAnimationFrame(tick);
+
+                };
+
+                video.addEventListener('loadeddata', readyListener);
+
+                var constraints = {audio: false, video: true};
+
+                function successCallback(stream) {
+                  video.srcObject = stream;
+                  onSuccess(stream);
+                }
+
+                function errorCallback(error) {
+
+                  console.log("navigator.getUserMedia error: ", error);
+                  alert("Error: Check your browser's settings for camera access on this site.");
+                }
+               
+                let stream = navigator.mediaDevices.getUserMedia(constraints).then(
+                    successCallback
+                ).catch(
+                    errorCallback
+                );
+
+                /*try {
+                    //stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                    //use the stream
+                    //video.srcObject = stream;
+                    //onSuccess(stream);
+
+                } catch(err) {
+                    //handle the error
+                    alert('Chrome Browser only. Could not connect camera stream.');
+                    //console.log(err);
+
+                }*/
+
+                function onSuccess(stream) {
+
+                    setTimeout(async function() {
+
+                        video.setAttribute('autoplay', '');
+                        video.setAttribute('muted', '');
+                        video.setAttribute('playsinline', '');
+
+                        await video.play();
+
+                    }, 500);
+                };
+
+            } catch (error) {
+                $('#canvas').hide();
+                $('#log').hide();
+                $('#no_rtc').html('<h4>Something went wrong...</h4>');
+                $('#no_rtc').show();
+            }
+
+            var stat = new profiler();
+
+            var ctx;
+            var img_u8,img_gxgy;
+
+            function demo_app(videoWidth, videoHeight) {
+                //canvasWidth  = canvas.width;
+                //canvasHeight = canvas.height;
+
+                ctx = canvas.getContext('2d');
+
+                //width="640" height="480"
+                //ctx.canvas.width = 640;
+                //ctx.canvas.height = 480;
+
+
+
+                ctx.fillStyle = "rgb(0,255,0)";
+                ctx.strokeStyle = "rgb(0,255,0)";
+
+                //ctx.scale(2, 2);
+
+                img_u8 = new jsfeat.matrix_t(screenWidth, screenHeight, jsfeat.U8C1_t);
+                img_gxgy = new jsfeat.matrix_t(screenWidth, screenHeight, jsfeat.S32C2_t);
+
+                stat.add("grayscale");
+                stat.add("sobel");
+            }
+
+            function tick() {
+                //compatibility.requestAnimationFrame(tick);
+                window.requestAnimationFrame(tick);
+
+                stat.new_frame();
+                if (video.readyState === video.HAVE_ENOUGH_DATA) {
+
+                    ctx.drawImage(video, 0, 0, screenWidth, screenHeight);
+
+                    //var imageData = ctx.getImageData(0, 0, 640, 480);
+                    var imageData = ctx.getImageData(0, 0, screenWidth, screenHeight);
+
+                    stat.start("grayscale");
+                    jsfeat.imgproc.grayscale(imageData.data, screenWidth, screenHeight, img_u8);
+                    stat.stop("grayscale");
+
+                    stat.start("sobel");
+                    jsfeat.imgproc.sobel_derivatives(img_u8, img_gxgy);
+                    stat.stop("sobel");
+
+                    // render result back to canvas
+                    var data_u32 = new Uint32Array(imageData.data.buffer);
+                    var alpha = (0xff << 24);
+                    var i = img_u8.cols*img_u8.rows, pix=0, gx = 0, gy = 0;
+                    while(--i >= 0) {
+                        gx = Math.abs(img_gxgy.data[i<<1]>>2)&0xff;
+                        gy = Math.abs(img_gxgy.data[(i<<1)+1]>>2)&0xff;
+                        pix = ((gx + gy)>>1)&0xff;
+                        data_u32[i] = (pix << 24) | (gx << 16) | (0 << 8) | gy;
+                    }
+
+                    ctx.putImageData(imageData, 0, 0);
+
+                    $('#log').html(stat.log());
+                }
+            }
+
+            $(window).unload(function() {
+                video.pause();
+                video.srcObject=null;
+            });
+        };
+        </script>
+    
+
+</body></html>

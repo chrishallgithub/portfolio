@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>404 Error: Page Not Found</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+
+
+/*
+@font-face
+{
+font-family: bebas-neue;
+src: url('http://www.chrishall.se/fonts/BebasNeue.otf'),
+	 url('http://www.chrishall.se/fonts/bebasneue-webfont.ttf') format('truetype'),
+	 url('http://www.chrishall.se/fonts/bebasneue-webfont.svg#BebasNeueRegular') format('svg'),
+	 url('http://www.chrishall.se/fonts/bebasneue-webfont.eot'),
+     url('http://www.chrishall.se/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+     url('http://www.chrishall.se/fonts/bebasneue-webfont.woff') format('woff');
+
+     
+     font-weight: normal;
+     font-style: normal;
+	 filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
+     zoom: 1;
+}
+
+*/
+
+@font-face
+{
+font-family: bebas-neue;
+src: url('https://www.chrishall.se/fonts/bebasneue-webfont.eot');
+src: url('https://www.chrishall.se/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+     url('https://www.chrishall.se/fonts/bebasneue-webfont.woff') format('woff'),
+     url('https://www.chrishall.se/fonts/BebasNeue.otf'),
+     url('https://www.chrishall.se/fonts/bebasneue-webfont.ttf') format('truetype'),
+     url('https://www.chrishall.se/fonts/bebasneue-webfont.svg#BebasNeueRegular') format('svg');
+  
+     font-weight: normal;
+     font-style: normal;
+     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
+     zoom: 1;
+}
+
+body {
+	font-family:bebas-neue;
+	
+	margin:0;
+	padding:0;
+}
+
+a { outline: none; }
+a:link {color:#000; text-decoration:none;}
+a:visited {color:#000; text-decoration:none;}
+a:hover {color:#fff; text-decoration:none;}
+a:active {color:#fff; text-decoration:none;}	
+
+#contents{
+	font-family:bebas-neue;
+	font:bebas-neue;
+
+	width:1024px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:31px;
+}
+
+
+#fullCasesContainer{
+	
+}
+
+#casesContainer{
+	clear:both;
+	background-color:#fff;
+	
+}
+
+
+#fullCase{
+	width:1016px;
+	border:4px #000 solid;
+	margin-bottom:62px;
+	padding-bottom:10px;
+	
+	
+}
+
+#fullTitle{
+	font-size:23px;
+	width:1016px;
+	padding: 10px 0;
+}
+
+#logo{
+	float:left;
+	margin-bottom:31px;
+	cursor:pointer;
+	background: url(https://www.chrishall.se/error/logoB.png);
+	width:300px;
+	height:106px;
+	background-repeat:no-repeat;
+	background-position:center;
+
+
+
+}
+#logo:hover{
+	background: url(https://www.chrishall.se/error/logoW.png);
+	background-repeat:no-repeat;
+	background-color:#000;
+	background-position:center;
+	
+}
+
+#about, #contact, #home{
+	margin-bottom:14px;
+	text-align:right;
+	margin-top:-7px;
+}
+
+#about:hover, #contact:hover, #home:hover{
+	background-color:#000;
+	color:#fff;
+}
+
+#nav{
+	float:right;
+	margin-bottom:31px;
+	font-size:30px;
+	cursor:pointer;
+	margin-top:4px;
+}
+
+#header{
+
+}
+
+
+</style>
+</head>
+
+<body onLoad="init()">
+
+    <audio id="tone" loop preload="auto">
+      <source src="https://www.chrishall.se/error/tone.mp3" type="audio/mp3" />
+      <source src="https://www.chrishall.se/error/tone.ogg" type="audio/ogg" />
+    </audio>
+    <audio id="tone2" loop preload="auto">
+      <source src="https://www.chrishall.se/error/tone2.mp3" type="audio/mp3" />
+      <source src="https://www.chrishall.se/error/tone2.ogg" type="audio/ogg" />
+    </audio>
+    
+    <script type="text/javascript">
+    function init(){
+        document.getElementById('tone').play();
+        setTimeout( document.getElementById('tone2').play(), 300 );
+    
+    }
+    </script>
+    
+    
+<div id="contents">
+
+<div id="header">
+
+    <a href="https://www.chrishall.se"><div id="logo">
+       
+    </div></a>
+   
+    <div id="nav">
+    
+        <div id="home">
+             <a href="https://www.chrishall.se">Home</a>
+        </div>
+        
+        <div id="about">
+            <a href="https://www.chrishall.se/#!/about">About</a>
+        </div>
+        
+        <div id="contact">
+             <a href="https://www.chrishall.se/#!/contact">Contact</a>
+        </div>
+
+    </div>
+    
+    
+</div>       
+        
+
+       
+       <div id="casesContainer">
+       
+            <div id="fullCase">
+            <center>
+    			<div id="fullTitle">404 Transmission error: The page you requested was not found
+                </div>
+                
+				<!-- Please click <a href="http://www.chrishall.se">here</a> to go back to the start page. -->
+
+
+				<img src="https://www.chrishall.se/error/tvError.gif" width="580" alt="404 Error" />
+    
+                
+    
+            </center>
+            </div><!-- end fullCase -->
+
+       
+			
+       
+       </div><!-- end casesContainer -->
+   
+</div> <!-- end contents -->
+
+</body>
+</html>

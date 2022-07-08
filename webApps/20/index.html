@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="20Style.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+
+<title>Take a Rest</title>
+</head>
+
+<body onLoad="init()">
+<div id="pauseLink" onClick="toggleTimer()">Pause</div>
+<div id="settingsLink">Settings</div>
+<div id="aboutLink">About</div>
+<div id= "txt"></div>
+<!-- <input type="text" id="txt" style="border: none; background-color:#fff; outline:none;" disabled="disabled"> -->
+
+<div id="settingsAlertBackground">
+    <div id="settingsContainer">
+        <canvas id="closeX" title="Close" width="15" height="15"></canvas>
+        <div id="settingsTitle">Settings</div>
+        <div id="settings">
+                    
+
+<table border="0">
+    <tr>
+      <td><div id="sounds" title="Do you want sound notifications ever 20 minutes?">Sounds</td>
+      <td><input type="radio" name="soundOption" value="jazz" checked="checked" />Jazz</td>
+      <td><input type="radio" name="soundOption" value="beep" />Beep</td>
+      <td><input type="radio" name="soundOption" value="forest" />Forest</td>
+      <td><input type="radio" name="soundOption" value="ocean" />Ocean</td>
+      <td><input type="radio" name="soundOption" value="off" />Off</td>
+    </tr>
+    	  </div>
+     <tr>
+      <td><div id="popUps" title="Do you want Pop-Up boxes to disturb your browsing?">Pop-Up Boxes</td>
+      <td><input type="radio" name="alertOption" value="on" checked="checked" />On</td>
+      <td><input type="radio" name="alertOption" value="off" />Off</td>
+     	  </div>
+    </tr>
+    
+</table>
+
+      	</div>
+        <!-- have to ensure at least one (alert or sound) is selected, otherwise there will be no alert. -->
+        
+    </div>
+</div>
+
+<div id="aboutAlertBackground">
+    <div id="aboutContainer">
+        <canvas id="closeAboutX" title="Close" width="15" height="15"></canvas>
+        <div id="aboutTitle">About</div>
+        <div id="about">
+            When working on a computer it is recommended to take a break every 20 minutes, and focus on something 20 feet away, for 20 seconds.<br /><br />This app plays a sound and/or displays a pop-up alert to remind us that it is time to take a break.<br /><br />Just leave this webpage open in a tab on your browser for it to work.
+      	</div>
+    </div>
+</div>
+
+<div id="pauseAlertBackground">
+    <div id="pauseContainer">
+        <canvas id="closePauseX" title="Close" width="15" height="15"></canvas>
+        <div id="pauseTitle">Paused</div>      
+    </div>
+</div>
+
+
+<!--change the source dynamically. allow users to choose their own?-->
+<audio id="alerter" preload="auto">
+    <source src="jazz20.mp3" type="audio/mp3" />
+</audio>
+	
+<!-- save all options as cookies-->
+	
+</body>
+</html>
+<script type="text/javascript" src="20js.js"></script>

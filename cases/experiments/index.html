@@ -1,0 +1,310 @@
+<script type="text/javascript">
+<!--
+window.location = "../../#!/experiments"
+//-->
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/png" href="../images/Favicon.png">
+<title>Experiments</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../caseStyles.css" />
+</head>
+
+<body class="nojQuery">
+
+
+<div id="contents">    
+
+    <div id="casesContainer">
+
+       	<div id="fullCase">
+
+            <div style="margin-bottom:55px; text-align: center; width: 100%;">
+            
+            	<div class="fullTitle" style="margin-bottom:60px;">Experiments</div>
+
+                <div class="expCase">
+
+                    <div id="nodeRelay" class="expLink" onClick="showExp(event)">Magical Lamp</div>
+                    
+                    <div class ="hiddenCont" style="display:none;">
+                    
+                        <div id="fullImage">
+                        	<iframe src="https://player.vimeo.com/video/76103895?title=0&byline=0&portrait=0" width="830" height="466" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        </div>
+            
+                        <div id="fullCopyOne">
+
+                            <div class="columnContent">
+                        
+                                <div class="bold">Background & Solution</div><br /><br />
+                                
+                                My own version of a smart lamp using a <a target="_blank" href="https://www.raspberrypi.org/">Raspberry Pi</a>, <a target="_blank" href="https://www.nodejs.org/">Node.js</a>, a <a target="_blank" href="https://www.en.wikipedia.org/wiki/Relay">relay</a> module and a webApp. LIGHT: ON!!!<br /><br />
+
+                            </div>
+                 
+                    	</div>
+                        
+                        
+
+                    </div>
+
+                    <div style="display: flex;">
+                    
+                        <hr class="expHr">
+
+                    </div>
+
+                </div>
+
+                <div class="expCase">
+
+                    <div id="twitMap" class="expLink" onClick="showExp(event)">Twitter Trends Map</div>
+                    
+                    <div class ="hiddenCont" style="display:none;">
+                    
+                        <div id="fullImage"><img src="cases/experiments/twitMap.png" alt="A Picture of an interactive Twitter Hashtag Map" width="830"/></div>
+            
+                        <div id="fullCopy">
+
+                            <div class="columnContent">
+                        
+                                <span class="bold">No longer working</span><br /><br />
+
+                                Both Twitter and Google Maps have changed their APIs since this was launched, and so it no longer works.
+
+                                <br>
+                                <br>
+                                <div class="bold">Background & Solution</div><br />
+                                
+                                I wanted a nice and simple way to see which hashtags were trending around the world, so I made a quick experiment using <a target="_blank" href="https://dev.twitter.com/">Twitter's API</a> and <a target="_blank" href="https://jvectormap.com/">jVectorMap</a>.<br />
+
+                            </div>
+
+                            <div class="columnContent">
+                    
+                                <div class="bold">Limitations</div><br />
+                    
+                                The number of calls that can be made to Twitter's API is limited, and so if a lot of people try to use the webApp in a short space of time, it is possible that the webApp will not function correctly.<br />
+
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="display: flex;">
+                    
+                        <hr class="expHr">
+
+                    </div>
+
+                </div>
+
+                <div class="expCase">
+
+                    <div id="hdn" class="expLink" onClick="showExp(event)">A Hard Days Night - WebRTC Experiment</div>
+                    
+                    <div class ="hiddenCont" style="display:none;">
+                    
+                        <div id="fullImage"><a style="text-decoration: none; outline: none; border: 0px none transparent;" href="<script>document.write(window.location.origin);</script>cases/pingPong/hdn/index.html" target="_blank"><img src="cases/experiments/hdn.jpeg" alt="A Hard Day's Night" width="500"/></a></div>
+            
+                        <div id="fullCopy">
+                        
+                            <div class="columnContent">
+
+                                <div class="bold">Background</div><br />
+
+                                WebRTC (Web Real-Time Communication) is a new technology that will be introduced to web browsers in the coming months. It allows video chat and voice calling without the the need of plugins. As the stream is browser-based, it is possible to manipulate sound and video in real-time with the use of Javascript.
+                            </div>
+
+                            <div class="columnContent">
+
+                                <div class="bold">Solution</div><br />
+
+                                I made a WebRTC <a href="<script>document.write(window.location.origin);</script>cases/pingPong/hdn/index.html" target="_blank">webapp</a> to familiarise myself with how the new technology works. It essentially makes the user the star of The Beatles' A Hard Day's Night album cover. It captures a user's image every few seconds (allowing them to strike a different pose), and overlays this image on one of the windows of the album cover. WebRTC is so cutting edge that it only works on the most recent version of Google's <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome Browser</a>. Other browsers will be supported in the future.
+                                <br /><br />
+
+                                <div class="bold">How To Use</div><br />
+                
+                                Just click: <a target="_blank" href="<script>document.write(window.location.origin);</script>cases/pingPong/hdn/index.html">A Hard Day's Night</a>, allow access to your webcam, and strike pose.
+
+                            </div>
+                        
+                        </div>
+                        
+
+                    </div>
+                    
+                    <div>
+                    
+                        <hr class="expHr">
+
+                    </div>
+
+                </div>
+
+                <div class="expCase">
+
+                    <div id="pc2mob" class="expLink" onClick="showExp(event)">Send links from Browser to Mobile Device using QR codes</div>
+                    
+                    <div class ="hiddenCont" style="display:none;">
+                    
+                        <div id="fullImage"><img src="cases/experiments/PC2Mob.png" alt="PC to Phone" width="830"/></div>
+            
+                        <div id="fullCopy">
+                        
+                            <span class="bold">Background</span><br /><br />
+                            
+                            I was browsing the internet on my computer one day and realised that there wasn’t a way for me send the link of the site I was looking at to my phone in a quick way. There are apps, such as <a href="https://chrome.google.com/webstore/detail/oadboiipflhobonjjffjbfekfjcgkhco" target="_blank">Chrome To Phone</a>, but my Android was version 2.2, which did not support the Chrome browser.<br /><br />
+                            
+                            <span class="bold">Solution</span><br /><br />
+                
+                            I wanted to make a quick way to send links to my phone that was as simple as possible. I decided to use a combination of <a href="https://en.wikipedia.org/wiki/QR_code" target="_blank">QR codes</a>, <a href="https://developers.google.com/chart/image/docs/making_charts" target="_blank">Google’s Chart API</a> and a small Javascript <a href="https://en.wikipedia.org/wiki/Bookmarklet" target="_blank">bookmarklet</a>. Google have recently decided to depreciate the use of chart images in their API though, so there is the possibility that this will not work.<br /><br />
+                
+                            To send a link to my phone, I click the bookmarklet on the page I am browsing. That sends the link to Google’s Chart API, which converts the link to a QR code. I then scan the QR code with a QR code reader on my phone, et voila, I’m looking at the site on my mobile.<br /><br />
+                
+                            It might sound complicated, but it is actually only three clicks until the page is viewed the mobile device.<br /><br />
+                
+                            <span class="bold">Here’s the javascript bookmarklet:</span><br /><br />
+                
+                            <span style="display:inline-block;">javascript:(function(){var page=window.location.href;window.location=</span><span style="display:inline-block;">"https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl="+page;})();</span><br /><br />
+                
+                            <span class="bold">What does that mean?</span><br /><br />
+                
+                            <i>"javascript:(function(){"</i> is just a way to tell the browser that you want to execute a Javascript function.<br /><br />
+                
+                            <i>“var page=window.location.href;”</i> creates a variable called “page”, and sets this variable to be the page you are currently looking at.<br /><br />
+                
+                            <i>“window.location="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl="+page;"</i> then redirects the page to go to Google’s Chart API service, and tells the service to create a QR code out of the “page” variable that was set previously.<br /><br />
+                
+                            <span class="bold">How To Use</span><br /><br />
+                
+                            To create a bookmarklet, make sure the bookmark bar is showing on your browser. Right click any empty space on the bookmark bar, then create a new bookmark. Call the bookmark whatever you like (<i>Awesome QR Creator</i>, perhaps?), but copy and paste the full Javascript snippet into the URL location. Make sure there are no spaces.<br /><br />
+                
+                            Alternatively, just select the text of the full bookmarklet, and then drag it to your bookmark bar on your browser.<br /><br />
+                
+                            Have the bookmarklet show on your browser bar, and then click on it whenever you want to create a QR code version of the page you are visiting.<br /><br />
+                        
+                    	</div>
+
+
+                    </div>
+                    
+                    <div>
+                    
+                        <hr class="expHr">
+
+                    </div>
+
+                </div>
+
+                <div class="expCase">
+
+                    <div id="wth" class="expLink" onClick="showExp(event)">Search and Geolocate Instagram Photo Hashtags</div>
+                    
+                    <div class ="hiddenCont" style="display:none;">
+                    
+                        <div id="fullImage"><img src="cases/experiments/wth.png" alt="What The Hash Image" width="830"/></div>
+            
+                        <div id="fullCopy">
+
+                            <div class="columnContent">
+                        
+                                <span class="bold">No longer working</span><br /><br />
+                                
+                                Instagram have <a href="https://www.instagram.com/developer/" taget="_blank">retired</a> the API which this experiment relied upon, as such <span class="bold">THIS EXPERIMENT NO LONGER WORKS.</span>
+
+                                <br /><br />
+
+                                <span class="bold">Background & Solution</span><br /><br />
+                                
+                                I wanted to see how and where hashtags were used around the world, so I made a quick experiment using <a target="_blank" href="https://instagram.com/developer/">Instagram's API</a> and <a target="_blank" href="https://developers.google.com/maps/">Google Maps API</a>.<br /><br />
+
+                            </div>
+
+                
+                            <div class="columnContent">
+
+                                <span class="bold">How it Worked</span><br /><br />
+                    
+                                By clicking: What The Hash?, and typing any hashtag in the text box.<br /><br />
+                                
+                                <span class="bold">Limitations</span><br /><br />
+                    
+                                The number of calls that could be made to both APIs was limited, and so if a lot of people tried to use the webApp in a short space of time, it was possible that the webApp would not function correctly.<br /><br />
+                                
+                                Also, the vast majority of Instagram users do not divulge their geolocation, and so not all photos were mappable.<br /><br />
+
+                            </div>
+                        
+                        </div>
+                        
+
+                    </div>
+                    
+                    <div>
+                    
+                        <hr class="expHr">
+
+                    </div>
+
+                </div>
+
+                <div class="expCase">
+
+                    <div id="tts" class="expLink" onClick="showExp(event)">Text To Speech with Animation</div>
+                    
+                    <div class ="hiddenCont" style="display:none;">
+                    
+                        <div id="fullImage"><img src="cases/experiments/tts.png" alt="A Picture of an animated text to speech experiment" width="830"/></div>
+            
+                        <div id="fullCopy">
+
+                            <div class="columnContent">
+                        
+                                <span class="bold">No longer working</span><br /><br />
+                                
+                                <span class="bold">THIS EXPERIMENT NO LONGER WORKS.</span>
+
+                                <br><br>
+                        
+                                <span class="bold">Background & Solution</span><br /><br />
+                                
+                                I wanted to understand the <a target="_blank" href="https://en.wikipedia.org/wiki/HTML5_Audio#Web_Audio_API_and_MediaStream_Processing_API">WebAudio API</a> and  I thought an experiment with Google's <a target="_blank" href="https://jvectormap.com/">Text to Speech</a> service would be a fun way to do it. And for even more fun, I threw in an animated dog with a funny accent.<br /><br />
+
+                            </div>
+                            
+                            <div class="columnContent">
+
+                                <span class="bold">How To Use</span><br /><br />
+                    
+                                By clicking on: Bingo, The Wonder Dog and typing in a message.<br /><br />
+                            
+                                <span class="bold">Limitations</span><br /><br />
+                    
+                                At the time, there was no official API for Google's text-to-speech service, and so I had to hack it a little, and now that hack does not work...<br /><br /><br /><br />
+
+                            </div>
+                            
+                    	</div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+         
+     	</div>
+       
+    </div>
+   
+</div> <!-- end contents -->
+
+</body>
+</html>
+
+<script type="text/javascript" src="../caseJS.js"></script>
