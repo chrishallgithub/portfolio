@@ -536,7 +536,8 @@ body.nojQuery #crochet:hover{
 	background-color:#fff;
 	margin:15px;
 	float:left;
-	width:308px;
+	/*width:308px;*/
+	width: 47%;
 	margin-top:31px;
 	
 	text-align:center;
